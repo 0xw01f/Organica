@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+* {
+    font-family: 'Nanum Myeongjo', serif;
+
+    --main-text-color: rgb(184, 184, 184);;
+}
+
+body {
+    background-color:rgb(0, 0, 0);
+    background-image:url(../images/background.jpg);
+    background-repeat:no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    
+
+}
+
+h1, h2, h3, h4, h5, h6{
+  font-weight: 200;
+}
+
+
+.nav {
+    color: var(--main-text-color);
+    font-size: x-large;
+    list-style-type: none;
+    display: flex;
+    margin-left: 3vw;
+}
+.nav li {
+    margin-left: 4vw;
+}
+.nav a {
+    text-decoration: none;
+    color: var(--main-text-color);
+}
+.nav a:hover {
+    color: rgb(207, 207, 207);
+}
+.nav a:active {
+    color: var(--main-text-color);
+}
+
+
+.brandTitle {
+    color: rgb(219, 219, 219);
+    font-family: 'Playfair Display', serif;
+    text-transform: uppercase;
+}
+
+
+
+
+.grid-container {
+    display: grid; 
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 0.5fr 2.3fr 0.2fr;
+    gap: 0px 0px;
+    grid-template-areas:
+    "containerBrandName containerNavBar containerNavBar"
+    "containePageCenter containePageCenter containePageCenter"
+    "containerPageFooter containerPageFooter containerPageFooter";
+
+    margin-top: 7vh;
+}
+
+.containerBrandName {
+    grid-area: containerBrandName;
+    margin-left: 15vw;
+    
+}
+
+.containerNavBar { grid-area: containerNavBar; }
+
+.containePageCenter {
+    grid-area: containePageCenter;
+    display: grid;
+    place-items: center;
+    text-align: center;
+}
+
+.containePageCenter h1 {
+    font-size: 7em;
+
+    background: #304A3F;
+    background: -webkit-linear-gradient(to bottom right, #304A3F 5%, #EEEEEE 49%, #304A3F 95%);
+    background: -moz-linear-gradient(to bottom right, #304A3F 5%, #EEEEEE 49%, #304A3F 95%);
+    background: linear-gradient(to bottom right, #304A3F 5%, #EEEEEE 49%, #304A3F 95%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.containePageCenter button {
+    background-color: #304A3F;
+    color: #EEEEEE;
+    font-size: large;
+    border: 0;
+    box-shadow: none;
+    border-radius: 0px;
+    padding: 15px 30px;
+
+}
+
+.containePageCenter button:hover{
+    background-color: #446658;
+    color: #b6b6b6;
+    cursor: pointer;
+}
+
+.containePageCenter button:active{
+    background-color: #2c4239;
+    color: #b6b6b6;
+}
+
+.containerPageFooter {
+    grid-area: containerPageFooter;
+    color: var(--main-text-color);
+    width: 600px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    bottom: 0px;
+    position: absolute;
+}
+
+.or-separator {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #e9ebec;
+    
+}
+
+.vertical-line {
+    border-left: 1px solid #d3d7da;
+    flex-grow: 1;
+    width: 1px;
+    margin-top: 15px;
+}
